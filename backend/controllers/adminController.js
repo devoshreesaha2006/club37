@@ -13,9 +13,10 @@ function signToken(admin) {
 function cookieOptions() {
   return {
     httpOnly: true,
-    secure: process.env.NODE_ENV === 'production',
-    sameSite: 'lax',
-    maxAge: 8 * 60 * 60 * 1000 // 8 hours
+    secure: true,
+    sameSite: "none",
+    maxAge: 8 * 60 * 60 * 1000, // 8 hours
+    path: "/",
   };
 }
 
