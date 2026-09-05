@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Admin Dashboard — Club 37</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="admin-shell" id="admin-dashboard">
+  <aside class="admin-sidebar">
+    <div class="brand"><span class="brand-mark">37</span> CLUB</div>
+    <ul class="admin-nav">
+      <li><button class="sidebar-link active" data-goto-tab="PENDING">Dashboard</button></li>
+      <li><button class="sidebar-link" data-goto-tab="PENDING">Applications</button></li>
+      <li><button class="sidebar-link" data-goto-tab="MEMBERS">Members</button></li>
+      <li><button class="sidebar-link" data-goto-tab="REJECTED">Rejected</button></li>
+      <li><button id="logout-btn" style="margin-top:20px;background:none;border:1px solid var(--panel-line);color:var(--bone-dim);padding:12px 14px;border-radius:3px;width:100%;text-align:left;font-size:0.85rem;font-weight:600;">Logout</button></li>
+    </ul>
+  </aside>
+
+  <main class="admin-main">
+    <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;margin-bottom:8px;">
+      <div>
+        <h1 style="font-size:1.6rem;">CLUB 37</h1>
+        <p style="color:var(--bone-dim);font-family:var(--font-display);letter-spacing:0.08em;font-size:0.85rem;margin:4px 0 0;">ADMIN CONTROL CENTER</p>
+      </div>
+      <div style="color:var(--bone-dim);font-size:0.85rem;" id="admin-email"></div>
+    </div>
+
+    <div class="grid-4" style="margin-top:32px;">
+      <div class="stat-card pending">
+        <div class="label">Pending Applications</div>
+        <div class="value" id="stat-pending">–</div>
+      </div>
+      <div class="stat-card approved">
+        <div class="label">Approved Members</div>
+        <div class="value" id="stat-approved">–</div>
+      </div>
+      <div class="stat-card rejected">
+        <div class="label">Rejected Applications</div>
+        <div class="value" id="stat-rejected">–</div>
+      </div>
+      <div class="stat-card">
+        <div class="label">Total Members</div>
+        <div class="value" id="stat-total">–</div>
+      </div>
+    </div>
+
+    <div class="tabs">
+      <button class="tab-btn active" data-tab="PENDING">PENDING</button>
+      <button class="tab-btn" data-tab="APPROVED">APPROVED</button>
+      <button class="tab-btn" data-tab="REJECTED">REJECTED</button>
+      <button class="tab-btn" data-tab="MEMBERS">MEMBERS</button>
+    </div>
+
+    <div id="applications-panel">
+      <div id="applications-list"></div>
+    </div>
+
+    <div id="members-panel" style="display:none;">
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Member ID</th>
+              <th>Name</th>
+              <th>City</th>
+              <th>Bike</th>
+              <th>Status</th>
+              <th>Joined</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="members-table-body"></tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

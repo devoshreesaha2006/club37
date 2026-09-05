@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Join Club 37</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+</head>
+<body class="grain-bg">
+
+<nav class="navbar">
+  <div class="container navbar-inner">
+    <a href="index.html" class="brand"><span class="brand-mark">37</span> CLUB</a>
+    <ul class="nav-links">
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="join.html" class="active">JOIN CLUB 37</a></li>
+      <li><a href="members.html">MEMBERS</a></li>
+      <li><a href="index.html#about">ABOUT</a></li>
+      <li><a href="index.html#contact">CONTACT</a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+  </div>
+</nav>
+
+<main id="join-main">
+  <section class="section">
+    <div class="container">
+      <div class="section-head" style="margin:0 auto 44px;text-align:center;max-width:600px;">
+        <div class="section-kicker">MEMBERSHIP APPLICATION</div>
+        <h2>JOIN CLUB 37</h2>
+        <p style="margin:0 auto;">Applications are reviewed by Club 37 before membership is confirmed.</p>
+      </div>
+
+      <form id="join-form" class="form-panel" novalidate>
+        <div class="form-alert" id="form-alert"></div>
+
+        <div class="field" data-field="name">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" placeholder="Your full name" required maxlength="100" />
+          <div class="field-error">Full name is required.</div>
+        </div>
+
+        <div class="field-row">
+          <div class="field" data-field="age">
+            <label for="age">Age</label>
+            <input type="number" id="age" name="age" placeholder="e.g. 28" min="16" max="100" required />
+            <div class="field-error">Enter a valid age between 16 and 100.</div>
+          </div>
+          <div class="field" data-field="city">
+            <label for="city">City</label>
+            <input type="text" id="city" name="city" placeholder="Your city" required maxlength="100" />
+            <div class="field-error">City is required.</div>
+          </div>
+        </div>
+
+        <div class="field-row">
+          <div class="field" data-field="phone">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="+1 555 123 4567" required maxlength="20" />
+            <div class="field-error">A valid phone number is required.</div>
+          </div>
+          <div class="field" data-field="instagram">
+            <label for="instagram">Instagram Username</label>
+            <input type="text" id="instagram" name="instagram" placeholder="@yourhandle" maxlength="60" />
+            <div class="field-error">Enter a valid Instagram username.</div>
+          </div>
+        </div>
+
+        <div class="field-row">
+          <div class="field" data-field="motorcycle">
+            <label for="motorcycle">Motorcycle Brand</label>
+            <input type="text" id="motorcycle" name="motorcycle" placeholder="e.g. Royal Enfield" required maxlength="100" />
+            <div class="field-error">Motorcycle brand is required.</div>
+          </div>
+          <div class="field" data-field="bikeModel">
+            <label for="bikeModel">Bike Model</label>
+            <input type="text" id="bikeModel" name="bikeModel" placeholder="e.g. Interceptor 650" required maxlength="100" />
+            <div class="field-error">Bike model is required.</div>
+          </div>
+        </div>
+
+        <div class="field" data-field="experience">
+          <label for="experience">Riding Experience</label>
+          <select id="experience" name="experience" required>
+            <option value="">Select your experience level</option>
+            <option value="Less than 1 year">Less than 1 year</option>
+            <option value="1-3 years">1–3 years</option>
+            <option value="3-5 years">3–5 years</option>
+            <option value="5-10 years">5–10 years</option>
+            <option value="10+ years">10+ years</option>
+          </select>
+          <div class="field-error">Riding experience is required.</div>
+        </div>
+
+        <div class="field" data-field="reason">
+          <label for="reason">Why do you want to join Club 37?</label>
+          <textarea id="reason" name="reason" placeholder="Tell us about your riding and why you want in..." required minlength="10" maxlength="1000"></textarea>
+          <div class="field-error">Please share at least a few sentences.</div>
+        </div>
+
+        <div class="field" data-field="profilePhoto">
+          <label>Profile Photo (optional)</label>
+          <div class="file-drop" id="file-drop">Click to upload a JPEG, PNG or WEBP — max 5MB</div>
+          <input type="file" id="profilePhoto" name="profilePhoto" accept="image/jpeg,image/png,image/webp" style="display:none;" />
+          <div class="field-error">Profile photo must be a valid image under 5MB.</div>
+        </div>
+
+        <p class="form-note">By submitting, you agree that Club 37 may contact you regarding your application.</p>
+
+        <button type="submit" class="btn btn-primary btn-block" id="submit-btn">SUBMIT MEMBERSHIP REQUEST</button>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <div><span class="brand-mark" style="color:var(--red)">37</span> CLUB — Ride. Connect. Belong.</div>
+    <div>&copy; <span id="year"></span> Club 37. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script src="script.js"></script>
+</body>
+</html>

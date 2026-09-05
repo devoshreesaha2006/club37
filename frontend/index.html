@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Club 37 — Ride. Connect. Belong.</title>
+<meta name="description" content="Club 37 is a motorcycle riding club for riders who live for the road. Apply for membership, meet the riders, and join real rides." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+</head>
+<body class="grain-bg">
+
+<nav class="navbar">
+  <div class="container navbar-inner">
+    <a href="index.html" class="brand"><span class="brand-mark">37</span> CLUB</a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">HOME</a></li>
+      <li><a href="join.html">JOIN CLUB 37</a></li>
+      <li><a href="members.html">MEMBERS</a></li>
+      <li><a href="index.html#about">ABOUT</a></li>
+      <li><a href="index.html#contact">CONTACT</a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="container hero-inner">
+    <div class="hero-eyebrow">MOTORCYCLE RIDING CLUB · EST. 37</div>
+    <h1>CLUB 37</h1>
+    <div class="hero-tagline">RIDE. CONNECT. BELONG.</div>
+    <p class="hero-sub">A community built for riders who live for the road.</p>
+    <div class="hero-actions">
+      <a href="join.html" class="btn btn-primary">JOIN CLUB 37</a>
+      <a href="members.html" class="btn btn-outline">MEET THE RIDERS</a>
+    </div>
+  </div>
+</header>
+
+<section class="section" id="about">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-kicker">ABOUT CLUB 37</div>
+      <h2>Built by riders, for riders.</h2>
+      <p>Club 37 started with a handful of riders who wanted more than solo miles — a crew to plan routes with, fix bikes with, and trust on the road. Today, membership is reviewed by hand so every rider who joins actually rides.</p>
+    </div>
+    <div class="grid-3">
+      <div class="value-card">
+        <div class="num">01</div>
+        <h3>Real Rides</h3>
+        <p>Weekend runs, long-haul tours, and late-night city loops — planned by members, for members.</p>
+      </div>
+      <div class="value-card">
+        <div class="num">02</div>
+        <h3>Reviewed Membership</h3>
+        <p>Every application is read by the Club 37 team before anyone is added to the roster. No bots, no spam accounts.</p>
+      </div>
+      <div class="value-card">
+        <div class="num">03</div>
+        <h3>Shared Standards</h3>
+        <p>Respect the road, respect the crew. Members look out for each other on and off the bike.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-tight">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-kicker">CLUB VALUES</div>
+      <h2>What we ride for.</h2>
+      <p>Four principles hold the club together, on the road and off it.</p>
+    </div>
+    <div class="grid-4">
+      <div class="value-card">
+        <h3>Discipline</h3>
+        <p>Maintained bikes, planned routes, no reckless riding.</p>
+      </div>
+      <div class="value-card">
+        <h3>Loyalty</h3>
+        <p>Members ride for each other, not just for themselves.</p>
+      </div>
+      <div class="value-card">
+        <h3>Craft</h3>
+        <p>Respect for the machine — its mechanics, its history, its upkeep.</p>
+      </div>
+      <div class="value-card">
+        <h3>Belonging</h3>
+        <p>A seat at the table for riders who show up and stay committed.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-kicker">FEATURED MEMBERS</div>
+      <h2>Some of the riders on our roster.</h2>
+      <p>Every rider below applied, was reviewed, and was approved by the Club 37 team.</p>
+    </div>
+    <div class="grid-3" id="home-featured-members">
+      <!-- Populated dynamically if the API is reachable; otherwise the Members page shows the full roster. -->
+      <div class="value-card">
+        <div class="num">→</div>
+        <h3>See the full roster</h3>
+        <p>Visit the Members page to meet every approved rider in Club 37.</p>
+        <a href="members.html" class="btn btn-outline" style="margin-top:16px;">MEET THE RIDERS</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-tight" id="contact">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-kicker">LATEST RIDES</div>
+      <h2>Where we've been lately.</h2>
+    </div>
+    <div class="grid-3">
+      <div class="value-card">
+        <div class="num">SAT · COAST RUN</div>
+        <h3>Coastal Highway Loop</h3>
+        <p>140 miles along the coast, ending with breakfast at the usual diner.</p>
+      </div>
+      <div class="value-card">
+        <div class="num">SUN · CITY MEET</div>
+        <h3>Late Night City Ride</h3>
+        <p>A slow loop through downtown once traffic dies down.</p>
+      </div>
+      <div class="value-card">
+        <div class="num">NEXT MONTH</div>
+        <h3>Mountain Pass Tour</h3>
+        <p>Two-day tour through the pass — open to full members only.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-tight">
+  <div class="cta-band">
+    <h2>Think you've got what it takes?</h2>
+    <p>Applications are reviewed by Club 37 before membership is confirmed.</p>
+    <a href="join.html" class="btn btn-primary">JOIN CLUB 37</a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <div><span class="brand-mark" style="color:var(--red)">37</span> CLUB — Ride. Connect. Belong.</div>
+    <div>&copy; <span id="year"></span> Club 37. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script src="script.js"></script>
+</body>
+</html>
